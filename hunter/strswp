@@ -1,0 +1,18 @@
+#include<stdio.h>
+main()
+{
+
+	char a[50];
+	int l,temp,i;
+	scanf("%s",&a);
+	l=strlen(a);
+	l=(l/2)*2;
+	for(i=0;i<l;i+=2)
+	{
+		temp=a[i];
+		a[i]=a[i+1];
+		a[i+1]=temp;
+	}
+	printf("%s",a);
+	
+}
