@@ -18,3 +18,4 @@ a[n-1]=temp;
 for(i=0;i<n;i++)
 printf("%d ",a[i]);
 }
+
