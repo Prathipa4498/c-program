@@ -1,0 +1,35 @@
+
+#include <stdio.h>
+#include<string.h>
+
+int main(void) {
+	char a[20];
+	int b[20],i,l;
+	scanf("%s",&a);
+	l=strlen(a);
+	for(i=0;i<l;i++)
+	{
+		if(a[i]=='I'||a[i]=='i')
+		b[i]=1;
+		if(a[i]=='V'||a[i]=='v')
+		b[i]=5;
+		if(a[i]=='X'||a[i]=='x')
+		b[i]=10;
+	}
+	int n=b[l-1];
+	for(i=l-2;i>=0;i--)
+	{
+		if(b[l-1]>b[i])
+        {
+		n=n-b[i];
+	
+        }
+		else
+		{
+		n=n+b[i];
+		
+		}
+	}
+	printf("\n%d",n);
+	
+}
