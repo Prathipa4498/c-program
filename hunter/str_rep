@@ -2,23 +2,25 @@
 int main(void)
 {
     char s[20];
-    int i,j,l;
+    int i,j,l,k;
     scanf("%s",&s);
     l=strlen(s);
     for(j=0;s[j]!='\0';j++)
     {
         int count=1;
-        for(i=j+1;i<l-1;i++)
+        for(i=j+1;i<l;i++)
         {
             if(s[j]==s[i])
             {
                 count++;
-                s[i]=s[i+1];
+                for(k=i+1;k<l;k++)
+                s[k-1]=s[k];
                 l--;
-                s[l]='\0';
-                
+                s[k-1]='\0';
+               
             }
         }
         printf("%c=%d\n",s[j],count);
     }
 }
+
