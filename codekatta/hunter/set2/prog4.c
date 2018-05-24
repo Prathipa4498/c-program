@@ -25,7 +25,7 @@ int main(void)
 	}
 	
 	if(ount==n-1)
-	printf("%d",a[0][i]);
+	printf("%d ",a[0][i]);
 	}
 	
 }
