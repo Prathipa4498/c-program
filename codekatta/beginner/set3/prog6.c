@@ -1,18 +1,23 @@
 #include<stdio.h>
-#include<string.h>
 void main()
 {
-	int i,j=0,l;
-	char str[1000];
-	gets(str);
-	l=strlen(str);
-	for(i=0;i<l;i++)
+	int i,j,n,temp;
+	scanf("%d",&n);
+	int a[n];
+	for(i=0;i<n;i++)
+	scanf("%d",&a[i]);
+	for(i=0;i<n-1;i++)
+	for(j=i+1;j<n;j++)
 	{
-		if(str[i]>47&&str[i]<58)
-		j++;
+		if(a[j]<a[i])
+		{
+		
+		temp=a[j];
+		a[j]=a[i];
+		a[i]=temp;
 	}
-	if(j==l)
-	printf("yes");
-	else
-	printf("no");
+	}
+	for(i=0;i<n;i++)
+	printf("%d ",a[i]);
+
 }
